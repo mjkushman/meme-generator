@@ -1,0 +1,66 @@
+https://lessons.springboard.com/Assessment-Meme-Generator-f3e40e446eff41afa40eee04f2ede827
+
+## **Meme Generator**
+
+For this assignment, you’ll be building a meme generator in the browser using HTML, CSS, and JavaScript.
+
+Your generator should consist of a form that accepts a link to an image, text for the top of the meme, and text for the bottom of the meme. When the user submits the form, use JavaScript to append to the DOM a div which contains the meme, including the image and its text.
+
+**Requirements**
+
+- The HTML page shows a form with three input options - Top Text, Bottom Text, Image - and a submit button
+- Users should be able to submit a form on the page to generate a new meme on the page
+- They should be able to add **multiple memes** to the page by submitting the form multiple times
+- Users should be able to click on a button to delete/remove a meme from the page
+- The form boxes should clear out automatically after the submit is clicked
+- The form fields need to have validation so they will not submit if a field is missing
+- Be sure to style your meme generator! It should be functional but also look nice
+- **Only use vanilla JavaScript: no frameworks/third-party libraries are allowed**
+
+You can find a 30 second video demo of a possible solution [here](https://drive.google.com/file/d/1QfeF85FwMzyoowpR1imqfMmYWbMsInhO/view)
+
+- **Want a hint on how to get the meme text over the image?**
+    
+    Approach
+    
+    You could do this by:
+    
+    - Add a ***div*** around your img and text and give it a `position: relative`.
+    - To position text divs, give them each a `position: absolute` and set their positioning by using the properties of ***top***, ***right***, ***bottom*** and ***left***.
+    - If you need help on positioning, check out our [free resources](https://lessons.springboard.com/d792a9c4608149a7bf84cf943e6f40be).
+- **Want a hint on handling the form submit to add a meme?**
+    
+    Approach
+    
+    The standard way to handle a form submit is to include an input in the form with a ***type*** attribute of “submit”. In JavaScript, you should then listen for “submit” events on the form element rather than click events on the button (form submits are triggered not only by clickong on the submit button, but also by hitting “enter” when you’re inside the form).
+    
+    After submission, if you see the page refresh, it’s because this is the default behavior of HTML forms! To stop the page from refreshing, you need to call `e.preventDefault()` on the event object `e`. To learn more about the event object, check out our free resources: [Introduction to Events](https://lessons.springboard.com/e9f770f3008c4bd8b6b40b5a47f8cc35).
+    
+- **Want a hint on deleting a meme?**
+
+============================
+1. Form user inputs:
+    a) link to an image, which becomes background for meme
+    b) text for top of image
+    c) text for bottom of image
+
+2. Actions
+    a) Create a new div, append to DOM
+    b) Add a Remove button which removes the meme from div
+    c) 
+    Append the finished meme to the DOM, visible on page
+
+3. Requirements
+    a) Validate inputs so it only works if all 3 fields are filled out
+
+
+
+How I will create the meme 
+- create a div 
+- set div background to form input
+- the div should have .meme class, and background image according to form
+- set div texts according to form inputs
+- where background is the image from url
+- create top text aligned to top center
+- create bottom text aligned to bottom center
+- hard code span width to 500 or so
